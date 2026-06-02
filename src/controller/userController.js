@@ -6,7 +6,7 @@ export const myProfileController = expressAsyncHandler(
     let _id = req._id;
     let result = await User.findById(_id);
     res.status(200).json({
-      sucess: true,
+      success: true,
       message: "profile read sucessfully",
       data: result,
     });
@@ -18,7 +18,7 @@ export const readAllUserController = expressAsyncHandler(
     const userid = req._id;
     let result = await User.find({ _id: { $ne: userid } });
     res.status(200).json({
-      sucess: true,
+      success: true,
       message: "All user read sucessfully",
       data: result,
     });
